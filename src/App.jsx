@@ -29,7 +29,7 @@ import { CurrencyProvider } from './contexts/CurrencyContext'
 function App() {
   const [user, setUser] = useState(() => {
   try {
-    const stored = /* removed localStorage.getItem */ null /* getItem */ ("currentUser");
+    const stored = localStorage.getItem("currentUser");
     return stored ? JSON.parse(stored) : null;
   } catch (err) {
     console.error("Failed to parse currentUser from localStorage", err);
@@ -98,4 +98,6 @@ function App() {
 }
 
 export default App
+ 
+
  
